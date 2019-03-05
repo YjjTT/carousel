@@ -18,6 +18,7 @@ playSlide(n % size)
 
 var timerId = setTimer()
 
+
 $(".window")
   .on("mouseenter", function() {
     window.clearInterval(timerId);
@@ -26,7 +27,8 @@ $(".window")
     timerId = setTimer()
   });
   
-  
+
+
 function setTimer() {
     return setInterval(() => {
         n += 1;
