@@ -26,6 +26,7 @@ $(".window")
     timerId = setTimer()
   });
   
+  
 function setTimer() {
     return setInterval(() => {
         n += 1;
