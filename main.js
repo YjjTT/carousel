@@ -3,7 +3,7 @@ console.log(allButtons);
 for (let i = 0; i < allButtons.length; i++) {
   $(allButtons[i]).on("click", function(x) {
     var index = $(x.currentTarget).index();
-    var px = index * -300;
+    var px = index * -940;
     $(images).css({
       transform: "translateX(" + px + "px)"
     });
@@ -18,20 +18,20 @@ playSlide(n % size)
 
 var timerId = setTimer()
 
-$(".window")
-  .on("mouseenter", function() {
-    window.clearInterval(timerId);
-  })
-  .on("mouseleave", function() {
-    timerId = setTimer()
-  });
+// $(".window")
+//   .on("mouseenter", function() {
+//     window.clearInterval(timerId);
+//   })
+//   .on("mouseleave", function() {
+//     timerId = setTimer()
+//   });
   
-function setTimer() {
-    return setInterval(() => {
-        n += 1;
-        playSlide(n % size)
-      }, 1000);
-}
+// function setTimer() {
+//     return setInterval(() => {
+//         n += 1;
+//         playSlide(n % size)
+//       }, 1000);
+// }
 function activeButton($button) {
   $button.addClass("red").siblings(".red").removeClass("red");
 }
